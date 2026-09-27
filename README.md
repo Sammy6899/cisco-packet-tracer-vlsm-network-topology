@@ -13,6 +13,37 @@ The objective is to subnet the Class B private address space **`172.16.0.0/16`**
 
 ---
 
+## 🗺️ Topology Overview
+
+The enterprise network topology consists of two primary operational domains:
+
+* **Departmental LAN Segments (Subnets A – E):**
+  * **LAN A (`/21`):** High-capacity segment supporting up to **1,801 hosts** (2,048 block size).
+  * **LAN B (`/22`):** Medium-large department supporting up to **901 hosts** (1,024 block size).
+  * **LAN C (`/23`):** Medium campus department supporting up to **451 hosts** (512 block size).
+  * **LAN D (`/24`):** Standard departmental LAN supporting up to **201 hosts** (256 block size).
+  * **LAN E (`/25`):** Small localized branch/management LAN supporting up to **101 hosts** (128 block size).
+* **Inter-Router WAN Connections (Subnets F – L):**
+  * Seven dedicated point-to-point serial and gigabit link subnets (**Subnets F, G, H, I, J, K, and L**), each operating under a **/30** prefix (block size of 4, allocating exactly 2 usable host addresses per link) to ensure 0% wasted host addresses.
+
+---
+
+## 🔑 Key Features
+
+### 1. Device Configuration & Security
+* All routers, switches, and client endpoints are structured with intuitive hostnames, interface descriptions, and modular interface cards.
+* Administrative access is secured with encrypted passwords for console, AUX, and Telnet/SSH VTY lines.
+* Enable secret protection configured across all routing nodes to secure privileged EXEC mode.
+
+### 2. VLSM Subnet Segmentation
+* IP blocks are allocated strictly in descending order of size to guarantee binary boundary alignment and eliminate IP fragmentation.
+* Default router gateways are consistently assigned to the **first usable IP address** (`.1`), and remote interfaces/servers occupy either the neighboring IP or the **last usable IP address** in each respective subnet.
+
+### 3. Static & Inter-Network Routing
+* Routing tables across all central and edge routers are populated with static route entries and default forwarding paths (`0.0.0.0 0.0.0.0`), allowing cross-subnet traffic to traverse intermediate router hops seamlessly.
+
+---
+
 ## 📊 VLSM Subnet Planning & Host Requirements
 
 Subnets are allocated in strict descending order of host requirements to ensure binary alignment and contiguous address space:

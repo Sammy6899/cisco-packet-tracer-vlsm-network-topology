@@ -84,7 +84,7 @@ Subnets are allocated in strict descending order of host requirements to ensure 
 Clone this repository:
 
 ```bash
-git clone https://github.com/<Sammy6899>/cisco-packet-tracer-vlsm-network-topology.git
+git clone https://github.com/Sammy6899/cisco-packet-tracer-vlsm-network-topology.git
 ```
 
 ## 👤 Author & Acknowledgments

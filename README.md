@@ -87,4 +87,8 @@ Clone this repository:
 git clone https://github.com/<Sammy6899>/cisco-packet-tracer-vlsm-network-topology.git
 ```
 
-##
+## 👤 Author & Acknowledgments
+
+- **Developer:** Samiha Tasnim Orthi, Tafpim, Sadia Shabnam
+- **Course:** CSE421 - Computer Networks
+

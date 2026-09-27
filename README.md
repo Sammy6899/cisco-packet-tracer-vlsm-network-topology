@@ -1,4 +1,4 @@
-# 🌐 🖥️ 🔀 Enterprise Network Architecture & Hierarchical VLSM Subnetting
+# 🌐 🖥️ 🔀 "Brac University Campus Project" Network Architecture & Hierarchical VLSM Subnetting
 
 > **Simulation Platform:** Cisco Packet Tracer (`421_project.pkt`)  
 > **Base Network Address:** `172.16.0.0/16`
@@ -75,3 +75,16 @@ Subnets are allocated in strict descending order of host requirements to ensure 
                     ├── 172.16.15.148/30  ────────────> [Subnet K] (WAN 6)
                     ├── 172.16.15.152/30  ────────────> [Subnet L] (WAN 7)
                     └── 172.16.15.156/30 - .252/30 ───> [Unallocated / Expansion]
+```
+
+---
+
+## 🚀 How to Run the Simulation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/<Sammy6899>/cisco-packet-tracer-vlsm-network-topology.git
+```
+
+##
